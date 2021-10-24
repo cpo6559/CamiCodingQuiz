@@ -1,0 +1,32 @@
+
+// GIVEN I am taking a code quiz
+// WHEN I click the start button
+// Make a start button 
+// var correctanswerQ1 = A
+// var correctanswerQ2 = A
+// var correctanswerQ3 = A
+// var correctanswerQ4 = A
+// var score = 0;
+// var count = 15;
+// document.getElementById('start').addEventListener("click", function{
+//     document.getElementById('questions')
+// })
+// The boolean correctanswerq1 is A is true; give 100 points and move to the next 
+//else, remove 5 seconds from the timer
+//
+//Create an event -- on click
+// THEN a timer starts and I am presented with a question
+// Make a timer (every second substract 1; once it reaches 0, clear interval)
+//set interval --anything inside the set interval gets triggered in whatever time we tell it
+// WHEN I answer a question
+// THEN I am presented with another question
+// WHEN I answer a question incorrectly
+// THEN time is subtracted from the clock
+// WHEN all questions are answered or the timer reaches 0
+//the question will automatically move on if not answered by 0
+// THEN the game is over
+// WHEN the game is over
+// THEN I can save my initials and my score
+
+//DOM manipulation --can the values inside of certain tags
+//You can change the concent on the screen using DOM manipulation. No need for outside .html files

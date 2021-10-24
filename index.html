@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cami's Coding Quiz</title>
+    <link rel="stylesheet" type="text/css" href="./02-Homework/style.css" />
+</head>
+<body>
+        <h1 id="title">Coding Quiz</h1>
+
+    <!-- quiz-container -->
+    <div id="quiz-container">
+        <!-- question container -->
+        <div class="questions">
+            <h2 id="question"></h2>
+            <ol type="A">
+                <button> <li class="option"><span id="option0" onclick="calcScore(this)"></span></li></button>
+                <button> <li class="option"><span id="option1" onclick="calcScore(this)"></span></li></button>
+                <button> <li class="option"><span id="option2" onclick="calcScore(this)"></span></li></button>
+                <button> <li class="option"><span id="option3" onclick="calcScore(this)"></span></li></button>
+              </ol>
+            <h4 id="stat"></h4>
+        </div>
+
+        <div class="buttons">
+            <button id="startbtn">Start Quiz</button>
+    </div>
+
+    <!-- scoreboard section -->
+    <div id="scoreboard">
+               <h2 id="score-title">High Scores</h2>
+        <h2 id="score"></h2>
+        <button type="button" id="score-btn" onclick="backToQuiz()">Back to Quiz</button>
+        <button type="button" id="check-answer" onclick="checkAnswer()">Check Answers</button>
+    </div>
+
+    <!-- answers section
+    <div id="answerBank">
+        <h2>Answers :</h2>
+        <ol type="1" id="answers">
+
+        </ol>
+        <button type="button" id="score-btn" onclick="backToQuiz()">Back to Quiz</button>
+    </div> -->
+
+
+<!-- <header>
+    <h1> Coding Quiz</h1>
+    <h3 id="timer">Timer <span></span> </h3>
+    <main class="quizQs"><span></span></main>
+    <div id="results"></div>
+</header>
+      
+ <body id="introductionPage">
+      <h5>This is a quiz description and set of instructions</h5>
+    
+    <button id="highscoresbtn">High Scores</button>
+    
+
+</body> -->
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="./script.js"></script>
+</html>
