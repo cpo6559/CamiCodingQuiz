@@ -12,9 +12,12 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
 }
+header{
+   border: black solid;
+}
 .container{
-    display: flex;
-   flex-direction: column;
+    /* display: flex; */
+   /* flex-direction: column; */
    border: black solid;
 justify-content: center;
 align-content: center;
@@ -38,8 +41,11 @@ button {
         display: inline-block;
         font-size: 16px;
           }
-area{
-    display: flex;
-    justify-content: flex-end;
-    float: right;
+
+  .options{
+        display: block;      
+
+  }
+  .timekeeping{
+      display: inline-block;
   }

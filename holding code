@@ -1,4 +1,258 @@
+.............................................................................
+// var quizContainer = document.getElementById('quiz');
+// var resultsContainer = document.getElementById('results');
+// var submitButton = document.getElementById('submit');
 
+// generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+
+// function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+
+//   function showQuestions(questions, quizContainer){
+//     // we'll need a place to store the output and the answer choices
+//     var output = [];
+//     var answers;
+
+//     // for each question...
+//     for(var i=0; i<questions.length; i++){
+      
+//       // first reset the list of answers
+//       answers = [];
+
+//       // for each available answer...
+//       for(letter in questions[i].answers){
+
+//         // ...add an html radio button
+//         answers.push(
+//           '<label>'
+//             + '<input type="radio" name="question'+i+'" value="'+letter+'">'
+//             + letter + ': '
+//             + questions[i].answers[letter]
+//           + '</label>'
+//         );
+//       }
+
+//       // add this question and its answers to the output
+//       output.push(
+//         '<div class="question">' + questions[i].question + '</div>'
+//         + '<div class="answers">' + answers.join('') + '</div>'
+//       );
+//     }
+
+//     // finally combine our output list into one string of html and put it on the page
+//     quizContainer.innerHTML = output.join('');
+//   }
+
+
+//   function showResults(questions, quizContainer, resultsContainer){
+    
+//     // gather answer containers from our quiz
+//     var answerContainers = quizContainer.querySelectorAll('.answers');
+    
+//     // keep track of user's answers
+//     var userAnswer = '';
+//     var numCorrect = 0;
+    
+//     // for each question...
+//     for(var i=0; i<questions.length; i++){
+
+//       // find selected answer
+//       userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+      
+//       // if answer is correct
+//       if(userAnswer===questions[i].correctAnswer){
+//         // add to the number of correct answers
+//         numCorrect++;
+        
+//         // color the answers green
+//         answerContainers[i].style.color = 'lightgreen';
+//       }
+//       // if answer is wrong or blank
+//       else{
+//         // color the answers red
+//         answerContainers[i].style.color = 'red';
+//       }
+//     }
+
+//     // show number of correct answers out of total
+//     resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+//   }
+
+//   // show questions right away
+//   showQuestions(questions, quizContainer);
+  
+//   // on submit, show results
+//   submitButton.onclick = function(){
+//     showResults(questions, quizContainer, resultsContainer);
+//   }
+
+//}
+
+
+
+// var timeLeft = 30;
+//   var elem = document.getElementById('timer');
+
+//   var timerId = setInterval(countdown, 1000);
+//   function countdown() {
+//         if (timeLeft == -1) {
+//           clearTimeout(timerId);
+//             } else {
+//           elem.innerHTML = timeLeft + ' seconds remaining';
+//           timeLeft--;
+//         }
+//       }
+// });
+
+// var i = 0;
+// var score = 0;
+// var countdown = 30
+// //On start 
+
+//     for (var a = 0; a < span.length; a++) {
+//       span[a].style.background = 'none';
+//     }
+//     question.innerHTML = 'Q.' + (i + 1) + ' ' + questionBank[i].question;
+//     option0.innerHTML = questionBank[i].option[0];
+//     option1.innerHTML = questionBank[i].option[1];
+//     option2.innerHTML = questionBank[i].option[2];
+//     option3.innerHTML = questionBank[i].option[3];
+//     stat.innerHTML = "Question" + ' ' + (i + 1) + ' ' + 'of' + ' ' + questionBank.length;
+//   }
+// })
+//   //     //Set a timer
+//   var timeLeft = 30;
+//   var elem = document.getElementById('timer');
+
+//   var timerId = setInterval(countdown, 1000);
+
+//   function countdown() {
+//     if (timeLeft == -1) {
+//       clearTimeout(timerId);
+//         } else {
+//       elem.innerHTML = timeLeft + ' seconds remaining';
+//       timeLeft--;
+//     }
+//   }
+
+//   // display.myQuestions(event);
+//   function countdown() {
+//     if (timeLeft == -1) {
+//       clearTimeout(timerId);
+//       doSomething();
+//     } else {
+//       elem.innerHTML = timeLeft + ' seconds remaining';
+//       timeLeft--;
+//       timerId.display();//not defined
+//     myQuestions();
+//  }
+
+//     //function to display questions
+//     function displayQuestion() {
+//       for (var a = 0; a < span.length; a++) {
+//         span[a].style.background = 'none';
+//       }
+//       question.innerHTML = 'Q.' + (i + 1) + ' ' + questionBank[i].question;
+//       option0.innerHTML = questionBank[i].option[0];
+//       option1.innerHTML = questionBank[i].option[1];
+//       option2.innerHTML = questionBank[i].option[2];
+//       option3.innerHTML = questionBank[i].option[3];
+//       stat.innerHTML = "Question" + ' ' + (i + 1) + ' ' + 'of' + ' ' + questionBank.length;
+//     }
+
+//     //function to calculate scores
+//     function calcScore(e) {
+//       if (e.innerHTML === questionBank[i].answer && score < questionBank.length) {
+//         score = score + 1;
+//         document.getElementById(e.id).style.background = 'limegreen';
+//       }
+//       else {
+//         document.getElementById(e.id).style.background = 'tomato';
+//       }
+//       setTimeout(nextQuestion, 300);
+//     }
+
+//     //function to display next question
+//     function nextQuestion() {
+//       if (i < questionBank.length - 1) {
+//         i = i + 1;
+//         displayQuestion();
+//       }
+//       else {
+//         points.innerHTML = score + '/' + questionBank.length;
+//         quizContainer.style.display = 'none';
+//         scoreboard.style.display = 'block';
+//       }
+//     }
+
+//     //click events to next button
+//     next.addEventListener('click', nextQuestion);
+
+//     //Back to Quiz button event
+//     function backToQuiz() {
+//       location.reload();
+//     }
+
+//     //function to check Answers
+//     function checkAnswer() {
+//       var answerBank = document.getElementById('answerBank');
+//       var answers = document.getElementById('answers');
+//       answerBank.style.display = 'block';
+//       scoreboard.style.display = 'none';
+//       for (var a = 0; a < questionBank.length; a++) {
+//         var list = document.createElement('li');
+//         list.innerHTML = questionBank[a].answer;
+//         answers.appendChild(list);
+//       }
+//     }
+
+
+//     displayQuestion();
+//   };
+// // storage
+// const quizContainer = document.getElementById('quizQs');
+// const resultsContainer = document.getElementById('results');
+// const startButton = document.getElementById('startbtn');
+// // var playBtn = document.querySelector("#play");
+
+
+// //   playBtn.addEventListener("click", function(event){
+// //   playBtn.remove();
+// //   event.preventDefault();    
+// //   displayNextQuestion();
+// //   });
+// //array of questions
+// const myQuestions = [
+//     {
+//       question: "Who invented JavaScript?",
+//       answers: {
+//         a: "Douglas Crockford",
+//         b: "Sheryl Sandberg",
+//         c: "Brendan Eich"
+//       },
+//       correctAnswer: "c"
+//     },
+//     {
+//       question: "Which one of these is a JavaScript package manager?",
+//       answers: {
+//         a: "Node.js",
+//         b: "TypeScript",
+//         c: "npm"
+//       },
+//       correctAnswer: "c"
+//     },
+//     {
+//       question: "Which tool can you use to ensure code quality?",
+//       answers: {
+//         a: "Fill me in ",
+//         b: "Fill me in please",
+//         c: "Fill me in thank you"
+//       }
+//     }
+//     ]}
+
+
+
+.................................................................................
 // GIVEN I am taking a code quiz
 // WHEN I click the start button
 // Make a start button 
@@ -30,3 +284,204 @@
 
 //DOM manipulation --can the values inside of certain tags
 //You can change the concent on the screen using DOM manipulation. No need for outside .html files
+
+
+
+
+CHECKING FOR MISSING 
+/*GIVEN I am taking a code quiz
+WHEN I click the start button
+-- need a button >> Start Quiz 
+
+--need button to respond to click 
+THEN a timer starts and I am presented with a question
+--need a timer to start on click of the start quiz
+--need the information to disappear that is not the quiz question and the timer
+WHEN I answer a question
+--need questions 
+--need answer choices buttons
+-- need answer choice buttons that repond to click 
+-- need answer choice to be compared to correct answer
+--need answer choice to be stored
+--need answer choice to:
+ if correct, add 100 pts
+ if incorrect, deduct 2 seconds 
+THEN I am presented with another question
+when answer is selected, the previous question is removed and a new question appears
+WHEN I answer a question incorrectly
+THEN time is subtracted from the clock
+--need answer choice to:
+ if correct, add 100 pts
+ if incorrect, deduct 2 seconds 
+WHEN all questions are answered or the timer reaches 0
+--game ends when timer hits 0
+--game ends when all the questions are answered
+--game end shows  total score
+THEN the game is over
+WHEN the game is over
+THEN I can save my initials and my score 
+--there's an input field on the game end total score page that records your score 
+--it will also display the high scores
+*/
+
+//variables 
+//Question bank
+// var questions = [
+//   {
+//     question: '_______ is the process of finding errors and fixing them within a program.',
+//     option: ['Compiling', 'Executing', 'Debugging', 'Scanning'],
+//     answer: 'Debugging'
+//   },
+//   {
+//     question: 'What does HTML stand for?',
+//     option: ['Hyper Text Markup Language', 'Home Tool Markup Language', 'Hyper Tele Marking Language ', 'Hyperlinks and Text Markup Language'],
+//     answer: 'Hyper Text Markup Language'
+//   },
+//   {
+//     question: 'How can you make a list that lists the items with bullets?',
+//     option: ['DL', 'UL', 'OL', 'List'],
+//     answer: 'UL'
+//   },
+//   {
+//     question: 'Which of the following is true about variable naming conventions in JavaScript?',
+//     option: ['JavaScript variable names must begin with a letter or the underscore character.', 'JavaScript variable names are case sensitive.', 'Both of the above.', 'None of the above.'],
+//     answer: 'Both of the above.'
+//   }
+// ];
+// //
+// var questionOptions = document.getElementById('optionscontainer');
+// // document.write(question)
+// var quizContainer = document.getElementById('quizcontainer');
+// var scoreKeeper = document.getElementById('scoreboard');
+// var optionsLos = document.getElementById('optionsLos');
+// //remove the unwanted section from the intial page
+// document.getElementById("quizcontainer").style.display = "none";
+// document.getElementById("scoresection").style.display = "none";
+
+// startbtn.addEventListener("click", function (event) {
+//   introductionpage.remove();
+//   event.preventDefault();
+//   document.getElementById("quizcontainer").style.display = "block";
+//   //Set a timer
+//   document.getElementById("timerName").style.display = "block";
+//   document.getElementById("timer").style.display = "block";
+//   var timeLeft = 30;
+//   var elem = document.getElementById('timer');
+
+//   var timerId = setInterval(countdown, 1000);
+
+//   function countdown() {
+//     if (timeLeft == -1) {
+//       clearTimeout(timerId);
+//     } else {
+//       elem.innerHTML = timeLeft + ' seconds remaining';
+//       timeLeft--;
+//     }
+//   }
+  
+//   //Store the total number of questions
+// var totalQuestions = $('questions').size();
+
+//   //Set the current question to display to 1
+//   var currentQuestion = 0;
+
+//   //Store the selector in a variable.
+//   //It is good practice to prefix jQuery selector variables with a $
+//   $questions = $('.questions');
+
+//   //Hide all the questions
+//   $questions.hide();
+
+//   //Show the first question
+//   $($questions.get(currentQuestion)).fadeIn();
+
+//   //attach a click listener to the HTML element with the id of 'next'
+//   $('#next').click(function () {
+
+//     //fade out the current question,
+//     //putting a function inside of fadeOut calls that function 
+//     //immediately after fadeOut is completed, 
+//     //this is for a smoother transition animation
+//     $($questions.get(currentQuestion)).fadeOut(function () {
+
+//       //increment the current question by one
+//       currentQuestion = currentQuestion + 1;
+//       generateQuiz(questions, quizcontainer, scoreKeeper, optionsLos);
+//       function generateQuiz(questions, quizcontainer) {
+//         function showQuestions(questions, quizcontainer) {
+//           // we'll need a place to store the output and the answer choices
+//           var output = [];
+//           var answers;
+
+//           // for each question...
+//           for (var i = 0; i < questions.length; i++) {
+
+//             // first reset the list of answers
+//             answers = [];
+//             // for each available answer...
+//             for (letter in questions[i].answers) {
+
+//               // ...add an html radio button
+//               answers.push(
+//                 '<label>'
+//                 + '<input type="radio" name="question' + i + '" value="' + letter + '">'
+//                 + letter + ': '
+//                 + questions[i].answers[letter]
+//                 + '</label>'
+//               );
+//           }
+//         }
+//           }
+//           // add this question and its answers to the output
+//           output.push(
+//             '<div class="question">' + questions[i].question + '</div>'
+//             + '<div class="answers">' + answers.join('') + '</div>'
+//           );
+//         }
+
+//         // finally combine our output list into one string of html and put it on the page
+//         quizcontainer.innerHTML = output.join('');
+//     })
+    
+//       function showResults(questions, quizcontainer, resultsContainer) {
+
+//         // gather answer containers from our quiz
+//         var answerContainers = quizcontainer.querySelectorAll('.answers');
+
+//         // keep track of user's answers
+//         var userAnswer = '';
+//         var numCorrect = 0;
+
+//         // for each question...
+//         for (var i = 0; i < questions.length; i++) {
+
+//           // find selected answer
+//           userAnswer = (answerContainers[i].querySelector('input[name=questions' + i + ']:checked') || {}).value;
+
+//           // if answer is correct
+//           if (userAnswer === questions[i].correctAnswer) {
+//             // add to the number of correct answers
+//             numCorrect++;
+
+//             // color the answers green
+//             answerContainers[i].style.color = 'lightgreen';
+//           }
+//           // if answer is wrong or blank
+//           else {
+//             // color the answers red
+//             answerContainers[i].style.color = 'red';
+//           }
+//         }
+//       }
+//         // show number of correct answers out of total
+//         resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+      
+
+//       // show questions right away
+//       showQuestions(questions, quizcontainer);
+
+//       // on submit, show results
+//       // submitButton.onclick = function(){
+//       //   showResults(questions, quizcontainer, resultsContainer);
+//       // }
+    }

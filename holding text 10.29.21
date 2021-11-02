@@ -1,0 +1,51 @@
+var questions = [
+  {
+    question: '_______ is the process of finding errors and fixing them within a program.',
+    option: ['Compiling', 'Executing', 'Debugging', 'Scanning'],
+    answer: 'Debugging'
+  },
+  {
+    question: 'What does HTML stand for?',
+    option: ['Hyper Text Markup Language', 'Home Tool Markup Language', 'Hyper Tele Marking Language ', 'Hyperlinks and Text Markup Language'],
+    answer: 'Hyper Text Markup Language'
+  },
+  {
+    question: 'How can you make a list that lists the items with bullets?',
+    option: ['DL', 'UL', 'OL', 'List'],
+    answer: 'UL'
+  },
+  {
+    question: 'Which of the following is true about variable naming conventions in JavaScript?',
+    option: ['JavaScript variable names must begin with a letter or the underscore character.', 'JavaScript variable names are case sensitive.', 'Both of the above.', 'None of the above.'],
+    answer: 'Both of the above.'
+  }
+];
+//
+var questionOptions = document.getElementById('optionscontainer');
+// document.write(question)
+var quizContainer = document.getElementById('quizcontainer');
+var scoreKeeper = document.getElementById('scoreboard');
+var optionsLos = document.getElementById('optionsLos');
+//remove the unwanted section from the intial page
+document.getElementById("quizcontainer").style.display = "none";
+document.getElementById("scoresection").style.display = "none";
+
+startbtn.addEventListener("click", function (event) {
+  introductionpage.remove();
+  event.preventDefault();
+  document.getElementById("quizcontainer").style.display = "block";
+  //Set a timer
+  document.getElementById("timerName").style.display = "block";
+  document.getElementById("timer").style.display = "block";
+  var timeLeft = 30;
+  var elem = document.getElementById('timer');
+
+  var timerId = setInterval(countdown, 1000);
+
+  function countdown() {
+    if (timeLeft == -1) {
+      clearTimeout(timerId);
+    } else {
+      elem.innerHTML = timeLeft + ' seconds remaining';
+      timeLeft--;
+    }}})
